@@ -18,7 +18,7 @@
              const pokemon = await response.json();
 
             list.innerHTML = '';
-            pokemon.forEach(user => {
+            pokemon.forEach(pokemon => {
                 const li = document.createElement('li');
                 li.innerText = post.title + ' (' + pokemon + ')';
                 list.appendChild(li);
