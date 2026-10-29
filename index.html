@@ -11,7 +11,7 @@
         const button = document.getElementById('loadBtn');
         const list = document.getElementById('userList');
 
-        button.addEventLister('click', async () => {
+        button.addEventListener('click', async () => {
             button.innerText = 'Загрузка...';
 
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
