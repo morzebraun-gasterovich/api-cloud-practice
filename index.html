@@ -3,19 +3,19 @@
     <title>Мой первый API клиент</title>
 </head>
 <body>
-    <h1>Список пользователей из Облака</h1>
-    <button id="loadBtn">Загрузить данные через API</button>
-    <ul id="userList"></ul>
+    <h1>покемон из Облака</h1>
+    <button id="loadBtn">Загрузить данные через API про покемона</button>
+    <div id="pokemonInfo"></div>
 
     <script>
         const button = document.getElementById('loadBtn');
-        const list = document.getElementById('userList');
+        const list = document.getElementById('pokemonInfo');
 
         button.addEventListener('click', async () => {
             button.innerText = 'Загрузка...';
 
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
-            const users = await response.json();
+             const pokemon = await response.json();
 
             list.innerHTML = '';
             users.forEach(user => {
